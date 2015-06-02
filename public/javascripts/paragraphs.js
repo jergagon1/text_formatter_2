@@ -12,16 +12,18 @@ $(document).ready(function(){
     $.ajax({
       url: action,
       type: method,
-      data: formData,
-      dataType: "json"
+      data: formData
     })
     .done(function(response){
       console.log("success");
       console.log(response);
-      // unable to resolve cors issues
+      // debugger
       // append corrected paragraph to formatted-paragraph
+      console.log(response.corrected_paragraph);
+      $(".formatted-paragraph").text(response.corrected_paragraph);
       // append meta paragraph to meta-paragraph
-
+      $(".meta-paragraph").text(response.meta_paragraph);
+      $(".paragraph-submission-form")[0].reset();
     })
     .fail(function(){
       console.log("Error");

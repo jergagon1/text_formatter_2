@@ -6,12 +6,9 @@ class ParagraphsController < ApplicationController
   end
 
   def create
-
     @paragraph = Paragraph.new(paragraph_params)
     if @paragraph.save
       render json: @paragraph, status: :created
-    else
-      render :json @paragraph.errors, status: :unprocessable_entity
     end
   end
 
