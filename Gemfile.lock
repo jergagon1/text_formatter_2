@@ -107,3 +107,6 @@ DEPENDENCIES
   rails-api
   rename
   spring
+
+BUNDLED WITH
+   1.10.0

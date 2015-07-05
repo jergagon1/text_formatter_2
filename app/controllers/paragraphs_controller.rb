@@ -8,7 +8,7 @@ class ParagraphsController < ApplicationController
   def create
     @paragraph = Paragraph.new(paragraph_params)
     if @paragraph.save
-      render json: @paragraph, status: :created
+      render json: @paragraph, :only => [:corrected_paragraph, :meta_paragraph], status: :created
     end
   end
 
