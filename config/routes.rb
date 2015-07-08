@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  resources :paragraphs
-
+  match '/api/v1/paragraphs', to: 'paragraphs#create', via: [:post, :options]
+  # resources :paragraphs
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
