@@ -1,9 +1,9 @@
 class ParagraphsController < ApplicationController
   # Index method for testing
-  def index
-    @paragraphs = Paragraph.all
-    render json: @paragraphs
-  end
+  # def index
+  #   @paragraphs = Paragraph.all
+  #   render json: @paragraphs
+  # end
 
   def create
     @paragraph = Paragraph.new(paragraph_params)
